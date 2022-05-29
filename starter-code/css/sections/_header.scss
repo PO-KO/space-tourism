@@ -6,12 +6,71 @@ header {
     padding: 24px;
   }
 
-  .logo img {
+  .logo {
+    display: block;
+    height: 40px;
     width: 40px;
+    img {
+      width: 100%;
+    }
   }
 
   nav {
-    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    .navbar {
+      display: flex;
+      flex-direction: column;
+      width: 254px;
+      margin-top: 55.95px;
+      position: relative;
+      a {
+        margin-bottom: 21px;
+        color: white;
+        font-family: $barlow_condensed;
+        letter-spacing: 2.7px;
+        text-transform: uppercase;
+        padding: (31px - 19)/2 32px;
+        display: block;
+        span {
+          font-weight: bold;
+          margin-right: 12px;
+        }
+        &:hover {
+          border-right: 4px solid white;
+        }
+      }
+
+      li:first-child span {
+        margin-right: 11px;
+      }
+      li:nth-child(2) span {
+        margin-right: 14px;
+      }
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      right: 0;
+      //   filter: blur(10px);
+      //   -webkit-filter: blur(10px);
+      background-color: rgba(white, 0.4);
+    }
+
+    .close {
+      text-align: end;
+      padding-right: 26.45px;
+      padding-top: 33.95px;
+      img {
+        width: 19.1px;
+        height: 19.1px;
+      }
+    }
   }
 
   .burger {
