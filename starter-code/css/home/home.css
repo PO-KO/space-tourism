@@ -19,8 +19,7 @@ a {
 }
 
 .container {
-  padding-left: 24px;
-  padding-right: 24px;
+  padding: 24px;
 }
 
 header .container {
@@ -49,7 +48,7 @@ header .burger {
 }
 
 .hero {
-  height: calc(100vh - 92px);
+  height: calc(100vh - 88px);
   text-align: center;
 }
 
