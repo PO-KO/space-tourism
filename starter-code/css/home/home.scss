@@ -1,0 +1,9 @@
+@import "../helpers/mixins";
+@import "../helpers/global-rules";
+@import "../sections/header";
+@import "../sections/hero";
+
+body {
+  background-image: url("./home-assets/background-home-mobile.jpg");
+  background-size: cover;
+}

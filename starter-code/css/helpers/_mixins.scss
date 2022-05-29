@@ -1,0 +1,69 @@
+// Reset page
+
+@mixin resetPage {
+  *,
+  ::after,
+  ::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  ul {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+// responsive
+
+@mixin breakpoint($dimension) {
+  @if $dimension == "sm" {
+    @media (min-width: 376px) {
+      @content;
+    }
+  } @else if $dimension == "md" {
+    @media (min-width: 992px) {
+      @content;
+    }
+  } @else if $dimension == "lg" {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  } @else if $dimension == "x-lg" {
+    @media (min-width: 1400px) {
+      @content;
+    }
+  }
+}
+
+// header position absolute
+
+@mixin absoluteHeader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+// centering v & h
+
+@mixin centering-vh {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// circle
+
+@mixin circle($dim) {
+  width: $dim;
+  height: $dim;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}

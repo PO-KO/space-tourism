@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bellefair&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow&display=swap");
+*,
+::after,
+::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 24px;
+}
+
+header .logo img {
+  width: 40px;
+}
+
+header nav {
+  display: none;
+}
+
+header .burger {
+  cursor: pointer;
+}
+
+.hero {
+  height: calc(100vh - 92px);
+  text-align: center;
+}
+
+.hero .text {
+  color: #d0d6f9;
+}
+
+.hero .text h3 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2.7px;
+}
+
+.hero .text h3 span {
+  font-family: "Bellefair", serif;
+  font-size: 80px;
+  color: white;
+  letter-spacing: 1px;
+  padding: 4px 0;
+  margin: 16px 0;
+  display: block;
+}
+
+.hero .text p {
+  font-size: 15px;
+  font-family: "Barlow", sans-serif;
+  line-height: 24px;
+  margin-bottom: 81px;
+  padding: 2.5px 0;
+}
+
+.hero .explore-btn {
+  background-color: white;
+  border: none;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  cursor: pointer;
+}
+
+.hero .explore-btn span {
+  font-family: "Bellefair", serif;
+  font-size: 20px;
+  letter-spacing: 1.25px;
+  color: #0b0d17;
+  text-transform: uppercase;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+body {
+  background-image: url("./home-assets/background-home-mobile.jpg");
+  background-size: cover;
+}
+/*# sourceMappingURL=home.css.map */

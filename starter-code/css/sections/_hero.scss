@@ -1,0 +1,50 @@
+.hero {
+  height: calc(100vh - 92px);
+  text-align: center;
+  .text {
+    color: $text_clr;
+    h3 {
+      font-family: $barlow_condensed;
+      font-weight: 400;
+      font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: 2.7px;
+      span {
+        font-family: $bellefair;
+        font-size: 80px;
+        color: white;
+        letter-spacing: 1px;
+        padding: 4px 0;
+        margin: 16px 0;
+        display: block;
+      }
+    }
+    p {
+      font-size: 15px;
+      font-family: $barlow;
+      line-height: 24px;
+      margin-bottom: 81px;
+      padding: 2.5px 0;
+    }
+  }
+
+  .explore-btn {
+    background-color: white;
+    border: none;
+    margin: 0 auto;
+    @include centering-vh;
+    @include circle(150px);
+    cursor: pointer;
+    span {
+      font: {
+        family: $bellefair;
+        size: 20px;
+      }
+      letter-spacing: 1.25px;
+      color: $very_black;
+      text-transform: uppercase;
+      margin-top: 5px;
+      margin-left: 5px;
+    }
+  }
+}
