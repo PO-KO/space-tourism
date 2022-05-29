@@ -22,6 +22,16 @@ a {
   padding: 24px;
 }
 
+header {
+  height: 96px;
+}
+
+@media (min-width: 1400px) {
+  header {
+    margin: 40px 0 0 55px;
+  }
+}
+
 header .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -35,10 +45,31 @@ header .container {
   padding: 24px;
 }
 
+@media (min-width: 768px) {
+  header .container {
+    padding: 0;
+    padding-left: 31px;
+    height: 100%;
+  }
+}
+
+@media (min-width: 1400px) {
+  header .container {
+    padding: 0;
+  }
+}
+
 header .logo {
   display: block;
   height: 40px;
   width: 40px;
+}
+
+@media (min-width: 768px) {
+  header .logo {
+    width: 48px;
+    height: 48px;
+  }
 }
 
 header .logo img {
@@ -54,6 +85,7 @@ header nav {
   background-color: rgba(255, 255, 255, 0.04);
   -webkit-backdrop-filter: blur(43px);
           backdrop-filter: blur(43px);
+  -moz-backdrop-filter: blur(43px);
   transition: right 0.5s;
   -webkit-transition: right 0.5s;
   -moz-transition: right 0.5s;
@@ -63,6 +95,35 @@ header nav {
 
 header nav.show {
   right: 0;
+}
+
+@media (min-width: 768px) {
+  header nav {
+    right: 0;
+    position: relative;
+    width: 450px;
+    padding: 0 46px;
+  }
+}
+
+@media (min-width: 1400px) {
+  header nav {
+    width: 830px;
+  }
+  header nav::before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 56%;
+    top: 50%;
+    left: -53%;
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(50%);
+    -webkit-transform: translateY(50%);
+    -moz-transform: translateY(50%);
+    -ms-transform: translateY(50%);
+    -o-transform: translateY(50%);
+  }
 }
 
 header nav .navbar {
@@ -75,7 +136,31 @@ header nav .navbar {
           flex-direction: column;
   width: 254px;
   margin-top: 55.95px;
-  position: relative;
+}
+
+@media (min-width: 768px) {
+  header nav .navbar {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: auto;
+    margin-top: 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  header nav .navbar li {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    text-align: center;
+    height: 100%;
+  }
 }
 
 header nav .navbar a {
@@ -88,13 +173,43 @@ header nav .navbar a {
   display: block;
 }
 
+@media (min-width: 768px) {
+  header nav .navbar a {
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    height: 100%;
+    display: inline-block;
+    line-height: 96px;
+  }
+}
+
 header nav .navbar a span {
   font-weight: bold;
   margin-right: 12px;
 }
 
+@media (min-width: 768px) {
+  header nav .navbar a span {
+    display: none;
+  }
+}
+
+@media (min-width: 1400px) {
+  header nav .navbar a span {
+    display: inline;
+  }
+}
+
 header nav .navbar a:hover {
   border-right: 4px solid white;
+}
+
+@media (min-width: 768px) {
+  header nav .navbar a:hover {
+    border: none;
+    border-bottom: 3px solid white;
+  }
 }
 
 header nav .navbar li:first-child span {
@@ -109,7 +224,12 @@ header nav .close {
   text-align: end;
   padding-right: 26.45px;
   padding-top: 33.95px;
-  position: relative;
+}
+
+@media (min-width: 768px) {
+  header nav .close {
+    display: none;
+  }
 }
 
 header nav .close img {
@@ -122,13 +242,54 @@ header .burger {
   cursor: pointer;
 }
 
+@media (min-width: 768px) {
+  header .burger {
+    display: none;
+  }
+}
+
 .hero {
-  height: calc(100vh - 88px);
+  height: calc(100vh - 96px);
   text-align: center;
+}
+
+@media (min-width: 1400px) {
+  .hero {
+    height: calc(100vh - 96px - 40px);
+    text-align: start;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (min-width: 1400px) {
+  .hero .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0 165px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
 }
 
 .hero .text {
   color: #d0d6f9;
+}
+
+@media (min-width: 768px) {
+  .hero .text {
+    margin-top: 82px;
+  }
 }
 
 .hero .text h3 {
@@ -137,6 +298,19 @@ header .burger {
   font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 2.7px;
+}
+
+@media (min-width: 768px) {
+  .hero .text h3 {
+    font-size: 20px;
+    letter-spacing: 3.38px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .hero .text h3 {
+    font-size: 28px;
+  }
 }
 
 .hero .text h3 span {
@@ -149,12 +323,35 @@ header .burger {
   display: block;
 }
 
+@media (min-width: 768px) {
+  .hero .text h3 span {
+    font-size: 150px;
+  }
+}
+
 .hero .text p {
   font-size: 15px;
   font-family: "Barlow", sans-serif;
   line-height: 24px;
   margin-bottom: 81px;
   padding: 2.5px 0;
+}
+
+@media (min-width: 768px) {
+  .hero .text p {
+    font-size: 16px;
+    line-height: 28px;
+    width: 444px;
+    margin-inline: auto;
+    margin-bottom: 156px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .hero .text p {
+    font-size: 18px;
+    line-height: 32px;
+  }
 }
 
 .hero .explore-btn {
@@ -190,8 +387,46 @@ header .burger {
   margin-left: 5px;
 }
 
+@media (min-width: 768px) {
+  .hero .explore-btn span {
+    font-size: 32px;
+    letter-spacing: 2px;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero .explore-btn {
+    width: 242px;
+    height: 242px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .hero .explore-btn {
+    margin: 0;
+  }
+}
+
 body {
   background-image: url("./home-assets/background-home-mobile.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 768px) {
+  body {
+    background-image: url("./home-assets/background-home-tablet.jpg");
+  }
+}
+
+@media (min-width: 1400px) {
+  body {
+    background-image: url("./home-assets/background-home-desktop.jpg");
+  }
 }
 /*# sourceMappingURL=home.css.map */

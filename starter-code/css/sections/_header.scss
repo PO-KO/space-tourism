@@ -1,15 +1,31 @@
 header {
+  height: 96px;
+  @include breakpoint("xx-lg") {
+    margin: 40px 0 0 55px;
+  }
   .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 24px;
+    @include breakpoint("md") {
+      padding: 0;
+      padding-left: 31px;
+      height: 100%;
+    }
+    @include breakpoint("xx-lg") {
+      padding: 0;
+    }
   }
 
   .logo {
     display: block;
     height: 40px;
     width: 40px;
+    @include breakpoint("md") {
+      width: 48px;
+      height: 48px;
+    }
     img {
       width: 100%;
     }
@@ -23,6 +39,7 @@ header {
     z-index: 100;
     background-color: rgba(white, 0.04);
     backdrop-filter: blur(43px);
+    -moz-backdrop-filter: blur(43px);
     transition: right 0.5s;
     -webkit-transition: right 0.5s;
     -moz-transition: right 0.5s;
@@ -31,12 +48,52 @@ header {
     &.show {
       right: 0;
     }
+
+    @include breakpoint("md") {
+      right: 0;
+      position: relative;
+      width: 450px;
+      padding: 0 46px;
+    }
+    @include breakpoint("xx-lg") {
+      width: 830px;
+      &::before {
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 56%;
+        top: 50%;
+        left: -53%;
+        background-color: rgba(white, 0.3);
+        transform: translateY(50%);
+        -webkit-transform: translateY(50%);
+        -moz-transform: translateY(50%);
+        -ms-transform: translateY(50%);
+        -o-transform: translateY(50%);
+      }
+    }
     .navbar {
       display: flex;
       flex-direction: column;
       width: 254px;
       margin-top: 55.95px;
-      position: relative;
+
+      @include breakpoint("md") {
+        flex-direction: row;
+        width: auto;
+        margin-top: 0;
+        align-items: center;
+        height: 100%;
+      }
+
+      li {
+        @include breakpoint("md") {
+          flex: 1;
+          text-align: center;
+          height: 100%;
+        }
+      }
+
       a {
         margin-bottom: 21px;
         color: white;
@@ -45,12 +102,30 @@ header {
         text-transform: uppercase;
         padding: (31px - 19)/2 32px;
         display: block;
+        @include breakpoint("md") {
+          padding: 0;
+          margin: 0;
+          font-size: 14px;
+          height: 100%;
+          display: inline-block;
+          line-height: 96px;
+        }
         span {
           font-weight: bold;
           margin-right: 12px;
+          @include breakpoint("md") {
+            display: none;
+          }
+          @include breakpoint("xx-lg") {
+            display: inline;
+          }
         }
         &:hover {
           border-right: 4px solid white;
+          @include breakpoint("md") {
+            border: none;
+            border-bottom: 3px solid white;
+          }
         }
       }
 
@@ -66,7 +141,9 @@ header {
       text-align: end;
       padding-right: 26.45px;
       padding-top: 33.95px;
-      position: relative;
+      @include breakpoint("md") {
+        display: none;
+      }
       img {
         width: 19.1px;
         height: 19.1px;
@@ -77,5 +154,8 @@ header {
 
   .burger {
     cursor: pointer;
+    @include breakpoint("md") {
+      display: none;
+    }
   }
 }
