@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./css/destination/destination.css" />
+    <script src="./js/script.js" defer></script>
+    <title>Frontend Mentor | Space tourism website</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <a class="logo" href="#"
+          ><img src="./assets/shared/logo.svg" alt="logo"
+        /></a>
+        <nav>
+          <div class="close">
+            <img src="./assets/shared/icon-close.svg" alt="burger" />
+          </div>
+          <ul class="navbar">
+            <li>
+              <a href="#"><span>00</span>Home</a>
+            </li>
+            <li>
+              <a class="active" href="./destination.html"
+                ><span>01</span>Destination</a
+              >
+            </li>
+            <li>
+              <a href="#"><span>02</span>Crew</a>
+            </li>
+            <li>
+              <a href="#"><span>03</span>Technology</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="burger">
+          <img src="./assets/shared/icon-hamburger.svg" alt="burger" />
+        </div>
+      </div>
+    </header>
+    <main class="destination">
+      <div class="container">
+        <div class="place-heading">
+          <h4><span>01</span>Pick your destination</h4>
+          <div class="place-img">
+            <img
+              src="./css/destination/destination-assets/image-moon.webp"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="place-block">
+          <ul class="place-switcher">
+            <li data-place="moon">Moon</li>
+            <li data-place="mars">Mars</li>
+            <li data-place="europa">Europa</li>
+            <li data-place="titan">Titan</li>
+          </ul>
+          <div class="place-text">
+            <h1>Moon</h1>
+            <p>
+              See our planet as you’ve never seen it before. A perfect relaxing
+              trip away to help regain perspective and come back refreshed.
+              While you’re there, take in some history by visiting the Luna 2
+              and Apollo 11 landing sites.
+            </p>
+          </div>
+          <div class="place-info">
+            <div class="distance">
+              <h4>Avg. distance</h4>
+              <span>380,400 KM</span>
+            </div>
+            <div class="travel-time">
+              <h4>Est. travel time</h4>
+              <span>3 Days</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

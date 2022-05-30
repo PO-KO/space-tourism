@@ -1,0 +1,17 @@
+@import "../helpers/mixins";
+@import "../helpers/global-rules";
+
+body {
+  background-image: url("./destination-assets/background-destination-mobile.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  @include breakpoint("md") {
+    background-image: url("./destination-assets/background-destination-tablet.jpg");
+  }
+  @include breakpoint("xx-lg") {
+    background-image: url("./destination-assets/background-destination-desktop.jpg");
+  }
+}
+
+@import "../sections/header";
+@import "../sections/destination-section";
