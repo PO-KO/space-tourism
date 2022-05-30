@@ -277,6 +277,13 @@ header .burger {
   padding-bottom: 0;
 }
 
+@media (min-width: 768px) {
+  .destination .container {
+    padding-top: 40px;
+    padding-left: 39px;
+  }
+}
+
 .destination .place-heading {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -300,6 +307,13 @@ header .burger {
   margin-bottom: 32px;
 }
 
+@media (min-width: 768px) {
+  .destination .place-heading h4 {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+}
+
 .destination .place-heading h4 span {
   font-weight: 700;
   color: rgba(255, 255, 255, 0.25);
@@ -314,6 +328,13 @@ header .burger {
   animation: fade-out 0.3s ease-out forwards;
   -webkit-animation: fade-out 0.3s ease-out forwards;
   z-index: -10;
+}
+
+@media (min-width: 768px) {
+  .destination .place-heading .place-img {
+    width: 300px;
+    height: 300px;
+  }
 }
 
 .destination .place-heading .place-img img {
@@ -342,6 +363,13 @@ header .burger {
   margin-bottom: 20px;
 }
 
+@media (min-width: 768px) {
+  .destination .place-block .place-switcher {
+    width: 285.5px;
+    margin-inline: auto;
+  }
+}
+
 .destination .place-block .place-switcher li {
   padding-bottom: 8px;
 }
@@ -357,6 +385,15 @@ header .burger {
   margin-bottom: 32px;
   position: relative;
   height: 223px;
+}
+
+@media (min-width: 768px) {
+  .destination .place-block .place-text {
+    width: 573px;
+    margin-inline: auto;
+    margin-bottom: 28px;
+    padding-bottom: 49px;
+  }
 }
 
 .destination .place-block .place-text h1 {
@@ -378,6 +415,13 @@ header .burger {
   -webkit-animation: fade-in 0.3s ease-in forwards;
 }
 
+@media (min-width: 768px) {
+  .destination .place-block .place-text h1 {
+    font-size: 80px;
+    margin-bottom: 8px;
+  }
+}
+
 .destination .place-block .place-text p {
   color: #d0d6f9;
   position: absolute;
@@ -397,9 +441,33 @@ header .burger {
   -webkit-animation: fade-in 0.3s ease-in forwards;
 }
 
+@media (min-width: 768px) {
+  .destination .place-block .place-text p {
+    line-height: 28px;
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  .destination .place-block .place-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+
 .destination .place-block .place-info .distance {
   margin-bottom: 32px;
   position: relative;
+}
+
+@media (min-width: 768px) {
+  .destination .place-block .place-info .distance {
+    margin: 0;
+  }
 }
 
 .destination .place-block .place-info .travel-time {
