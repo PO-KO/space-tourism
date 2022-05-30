@@ -22,3 +22,18 @@ $very_black: rgba(11, 13, 23, 1);
 .container {
   padding: 24px;
 }
+
+@mixin fade-in {
+  position: relative;
+  z-index: 1;
+  animation: fade-in 0.3s ease-in forwards;
+  -webkit-animation: fade-in 0.3s ease-in forwards;
+}
+
+@mixin fade-out {
+  position: absolute;
+  bottom: 0;
+  animation: fade-out 0.3s ease-out forwards;
+  -webkit-animation: fade-out 0.3s ease-out forwards;
+  z-index: -10;
+}

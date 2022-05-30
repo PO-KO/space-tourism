@@ -313,6 +313,7 @@ header .burger {
   bottom: 0;
   animation: fade-out 0.3s ease-out forwards;
   -webkit-animation: fade-out 0.3s ease-out forwards;
+  z-index: -10;
 }
 
 .destination .place-heading .place-img img {
@@ -354,6 +355,8 @@ header .burger {
   padding-bottom: 32px;
   border-bottom: 1px solid #383b4b;
   margin-bottom: 32px;
+  position: relative;
+  height: 223px;
 }
 
 .destination .place-block .place-text h1 {
@@ -361,17 +364,46 @@ header .burger {
   font-family: "Bellefair", serif;
   font-weight: 400;
   text-transform: uppercase;
+  position: absolute;
+  bottom: 0;
+  animation: fade-out 0.3s ease-out forwards;
+  -webkit-animation: fade-out 0.3s ease-out forwards;
+  z-index: -10;
+}
+
+.destination .place-block .place-text h1.active {
+  position: relative;
+  z-index: 1;
+  animation: fade-in 0.3s ease-in forwards;
+  -webkit-animation: fade-in 0.3s ease-in forwards;
 }
 
 .destination .place-block .place-text p {
   color: #d0d6f9;
+  position: absolute;
+  bottom: 0;
+  animation: fade-out 0.3s ease-out forwards;
+  -webkit-animation: fade-out 0.3s ease-out forwards;
+  z-index: -10;
   font-size: 15px;
   font-family: "Barlow", sans-serif;
   line-height: 25px;
 }
 
+.destination .place-block .place-text p.active {
+  position: relative;
+  z-index: 1;
+  animation: fade-in 0.3s ease-in forwards;
+  -webkit-animation: fade-in 0.3s ease-in forwards;
+}
+
 .destination .place-block .place-info .distance {
   margin-bottom: 32px;
+  position: relative;
+}
+
+.destination .place-block .place-info .travel-time {
+  position: relative;
 }
 
 .destination .place-block .place-info h4 {
@@ -388,6 +420,18 @@ header .burger {
   font-size: 28px;
   font-family: "Bellefair", serif;
   text-transform: uppercase;
+  position: absolute;
+  bottom: 0;
+  animation: fade-out 0.3s ease-out forwards;
+  -webkit-animation: fade-out 0.3s ease-out forwards;
+  z-index: -10;
+}
+
+.destination .place-block .place-info span.active {
+  position: relative;
+  z-index: 1;
+  animation: fade-in 0.3s ease-in forwards;
+  -webkit-animation: fade-in 0.3s ease-in forwards;
 }
 
 @-webkit-keyframes fade-in {
