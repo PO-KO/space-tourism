@@ -110,6 +110,7 @@ header {
           display: inline-block;
           line-height: 96px;
         }
+
         span {
           font-weight: bold;
           margin-right: 12px;
@@ -120,7 +121,8 @@ header {
             display: inline;
           }
         }
-        &:hover {
+        &:hover,
+        &.active {
           border-right: 4px solid white;
           @include breakpoint("md") {
             border: none;

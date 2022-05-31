@@ -13,5 +13,13 @@ body {
   }
 }
 
+body.preload * {
+}
+
+.resize-animation-stopper *,
+body.preload * {
+  transition: none !important;
+}
+
 @import "../sections/header";
 @import "../sections/destination-section";

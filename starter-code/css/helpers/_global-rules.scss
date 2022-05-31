@@ -26,16 +26,32 @@ $very_black: rgba(11, 13, 23, 1);
 @mixin fade-in {
   position: relative;
   z-index: 1;
-  animation: fade-in 0.3s ease-in forwards;
-  -webkit-animation: fade-in 0.3s ease-in forwards;
-  @content;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  opacity: 1;
 }
 
 @mixin fade-out {
   position: absolute;
   bottom: 0;
-  animation: fade-out 0.3s ease-out forwards;
-  -webkit-animation: fade-out 0.3s ease-out forwards;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transform: translateX(-150%);
+  -webkit-transform: translateX(-150%);
+  -moz-transform: translateX(-150%);
+  -ms-transform: translateX(-150%);
+  -o-transform: translateX(-150%);
   z-index: -10;
-  @content;
+  opacity: 0;
 }

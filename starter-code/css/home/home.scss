@@ -1,7 +1,5 @@
 @import "../helpers/mixins";
 @import "../helpers/global-rules";
-@import "../sections/header";
-@import "../sections/hero";
 
 body {
   background-image: url("./home-assets/background-home-mobile.jpg");
@@ -14,3 +12,10 @@ body {
     background-image: url("./home-assets/background-home-desktop.jpg");
   }
 }
+
+.resize-animation-stopper * {
+  animation: none !important;
+  transition: none !important;
+}
+@import "../sections/header";
+@import "../sections/hero";
