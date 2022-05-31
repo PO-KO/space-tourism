@@ -2,12 +2,28 @@
   height: calc(100vh - 96px);
   color: white;
   text-align: center;
+  @include breakpoint("xx-lg") {
+    display: flex;
+    align-items: center;
+  }
   .container {
     padding-top: 0;
     padding-bottom: 0;
     @include breakpoint("md") {
       padding-top: 40px;
       padding-left: 39px;
+    }
+
+    @include breakpoint("xx-lg") {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 157px - 29px - 28px;
+      width: 100%;
+      padding-right: 163px;
+      padding-left: 166px;
+      padding-top: 0;
+      padding-bottom: 80px;
     }
   }
 
@@ -17,6 +33,9 @@
     align-items: center;
     margin-bottom: 26px;
     position: relative;
+    @include breakpoint("xx-lg") {
+      margin: 0;
+    }
     h4 {
       text-transform: uppercase;
       font-family: $barlow_condensed;
@@ -26,10 +45,18 @@
       @include breakpoint("md") {
         align-self: flex-start;
       }
+      @include breakpoint("xx-lg") {
+        font-size: 28px;
+        letter-spacing: 4.72px;
+        margin-bottom: 97px;
+      }
       span {
         font-weight: 700;
         color: rgba(white, 0.25);
         margin-right: 18px;
+        @include breakpoint("xx-lg") {
+          margin-right: 28px;
+        }
       }
     }
     .place-img {
@@ -40,6 +67,12 @@
         width: 300px;
         height: 300px;
       }
+      @include breakpoint("xx-lg") {
+        width: 445px;
+        height: 445px;
+        margin-left: 29px + 28px;
+      }
+
       img {
         max-width: 100%;
       }
@@ -62,6 +95,13 @@
         width: 285.5px;
         margin-inline: auto;
       }
+
+      @include breakpoint("xx-lg") {
+        justify-content: space-between;
+        font-size: 16px;
+        margin-bottom: 37px;
+        margin-left: 0;
+      }
       li {
         padding-bottom: 8px;
         cursor: pointer;
@@ -78,11 +118,18 @@
       margin-bottom: 32px;
       position: relative;
       height: 223px;
+
       @include breakpoint("md") {
         width: 573px;
         margin-inline: auto;
         margin-bottom: 28px;
         padding-bottom: 49px;
+      }
+      @include breakpoint("xx-lg") {
+        text-align: start;
+        height: auto;
+        padding-bottom: 54px;
+        width: 445px;
       }
       h1 {
         font: {
@@ -98,6 +145,10 @@
         @include breakpoint("md") {
           font-size: 80px;
           margin-bottom: 8px;
+        }
+
+        @include breakpoint("xx-lg") {
+          font-size: 100px;
         }
       }
       p {
@@ -115,6 +166,10 @@
           line-height: 28px;
           font-size: 16px;
         }
+        @include breakpoint("xx-lg") {
+          font-size: 18px;
+          line-height: 32px;
+        }
       }
     }
 
@@ -122,6 +177,10 @@
       @include breakpoint("md") {
         display: flex;
         justify-content: space-evenly;
+      }
+      @include breakpoint("xx-lg") {
+        justify-content: space-between;
+        width: 445px - 100.5px;
       }
       .distance {
         margin-bottom: 32px;
